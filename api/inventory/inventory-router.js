@@ -73,6 +73,19 @@ router.delete('/:id', (req, res) => {
     })
 });
 
+router.post('/', (req, res, next) => {
+    const credentials = req.body;
+
+
+    Inventory.addInventory(credentials)
+    .then(saved => {
+        res.status(201).json(saved);
+    })
+    .catch(err => {
+        console.log('Error registering user.', err);
+        res.status(500).json({ error: 'Error registering vehicle.' });
+    });
+})
  
 
 

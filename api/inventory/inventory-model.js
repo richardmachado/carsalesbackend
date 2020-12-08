@@ -5,6 +5,7 @@ module.exports = {
     findInventoryById,
     updateInventory,
     removeInventory,
+    addInventory
 }
 
 function getInventory() {
@@ -34,4 +35,10 @@ function removeInventory (id) {
     return db('inventory')
     .where('id', id)
     .del()
+}
+
+function addInventory(credentials){
+    return db('inventory')
+    .insert(credentials)
+    
 }
