@@ -6,12 +6,10 @@ exports.up = function (knex)
             .notNullable();
         table.string("password")
             .notNullable();
-
 })
 };
 
 exports.down = function (knex)
 {
     return knex.schema.dropTable('users')
-
 };
