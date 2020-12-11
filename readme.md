@@ -11,11 +11,11 @@ server.get('/', (req, res) => { res.send("Server is running"); });
 
 items missing: 
 
-vin#
-fuel economy
-color interior
-color exterior
-fabric
-body type
+x vin#
+x fuel economy
+x color interior
+x color exterior
+x fabric
+x body type
 
 photos
