@@ -10,6 +10,7 @@ server.use(helmet());
 server.use(cors());
 
 const { cloudinary } = require('./helpers/cloudinary');
+server.use(express.static('public'));
 server.use(express.json({limit:'50mb'}));
 server.use(express.urlencoded({ limit: '50mb', extended: true }))
 
@@ -23,7 +24,7 @@ server.get('/', (req, res) => { res.send("Server is running"); });
 
 server.get('/api/images', async (req, res) => {
     const { resources } = await cloudinary.search
-        .expression('folder:dev_setups')
+        .expression('folder:new_folder')
         .sort_by('public_id', "desc")
         .execute();
     const publicIds = resources.map(file => file.public_id);
@@ -35,7 +36,7 @@ server.post('/api/upload', async(req,res) => {
     try {
         const fileStr = req.body.data;
         const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-            upload_preset: 'dev_setups'
+            upload_preset: 'new_images'
         })
         console.log(uploadedResponse);
         res.json({msg:"you did it!"})
