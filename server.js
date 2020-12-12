@@ -24,7 +24,7 @@ server.get('/', (req, res) => { res.send("Server is running"); });
 
 server.get('/api/images', async (req, res) => {
     const { resources } = await cloudinary.search
-        .expression('folder:dev_setups')
+        .expression('folder:dev_setups2')
         .sort_by('public_id', "desc")
         .execute();
     const publicIds = resources.map(file => file.public_id);
