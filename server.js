@@ -25,7 +25,7 @@ server.get('/', (req, res) => { res.send("Server is running"); });
 
 server.get('/api/images', async (req, res) => {
     const { resources } = await cloudinary.search
-        .expression('folder:dev_setups2')
+        .expression(`folder:dev_setups2 AND tags:'vin'`)
         .sort_by('public_id', "desc")
         .execute();
     const publicIds = resources.map(file => file.public_id);
@@ -37,7 +37,9 @@ server.post('/api/upload', async(req,res) => {
     try {
         const fileStr = req.body.data;
         const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-            upload_preset: 'dev_setups', folder:"dev_setups2"
+            folder: "dev_setups2",
+            tags:"vin"
+
         })
         console.log(uploadedResponse);
         res.json({msg:"you did it!"})
