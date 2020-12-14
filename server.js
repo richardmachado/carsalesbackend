@@ -39,7 +39,6 @@ server.post('/api/upload', async(req,res) => {
         const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
             folder: "dev_setups2",
             tags: "vin",
-            public_id: "vin"
         })
         console.log(uploadedResponse);
         res.json({msg:"you did it!"})
