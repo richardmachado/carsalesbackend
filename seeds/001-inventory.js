@@ -7,7 +7,7 @@ exports.seed = function(knex) {
       return knex('inventory').insert([
         {
           id: 1,
-          "vin": "1M8GDM9A2KP042788",
+          "vin": "1M8GDM9A2KP043111",
           "license_plate":"1ZED234",
           "year":"2000",
           "make": 'Toyota',
