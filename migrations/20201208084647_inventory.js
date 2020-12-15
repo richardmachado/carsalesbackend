@@ -5,6 +5,7 @@ exports.up = function (knex) {
         table.string("vin")
             .unique()
             .notNullable();
+        table.string("license_plate");
         table.string("year");
         table.string("make");
         table.string("model");

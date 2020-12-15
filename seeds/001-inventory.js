@@ -7,7 +7,8 @@ exports.seed = function(knex) {
       return knex('inventory').insert([
         {
           id: 1,
-          "vin":"1M8GDM9A2KP042788",
+          "vin": "1M8GDM9A2KP042788",
+          "license_plate":"1ZED234",
           "year":"2000",
           "make": 'Toyota',
           "model": "Corolla",
@@ -26,7 +27,8 @@ exports.seed = function(knex) {
         },
         {
           id: 2,
-          "vin":"1M8GDM9A7KP042788",
+          "vin": "1M8GDM9A7KP042788",
+          "license_plate":"1EXE234",
           "year":"2015",
           "make": 'Chevrolet',
           "model": "Suburban",
@@ -44,7 +46,8 @@ exports.seed = function(knex) {
         },
         {
           id: 3,
-          "vin":"1B8G7M9A7KP042799",
+          "vin": "1B8G7M9A7KP042799",
+          "license_plate":"1WHY234",
           "year":"2018",
           "make": 'Chevrolet',
           "model": "Impala",
