@@ -19,7 +19,9 @@ exports.seed = function(knex) {
           "color_interior":"Tan",
           "color_exterior": "Blue",
           "fabric":"Cloth",
-          "engine": "2.3L V4 Automatic",
+          "engine": "2.3L",
+          "cylinders": "V4",
+          "transmission": "Automatic",
           "description": "Runs nice, very fast, comfortable",
           "drivetrain":"2WD",
           "warranty":"none"
@@ -39,7 +41,9 @@ exports.seed = function(knex) {
           "color_interior":"Black",
           "color_exterior": "Black",
           "fabric":"Leather",
-          "engine": "4.8L V8 Automatic",
+          "engine": "5.6L",
+          "cylinders": "V8",
+          "transmission": "Automatic",
           "description": "Smooth ride, all leather interior",
           "drivetrain":"2WD",
           "warranty":"none"
@@ -58,7 +62,9 @@ exports.seed = function(knex) {
           "color_interior":"Tan",
           "color_exterior": "White",
           "fabric":"Cloth",
-          "engine": "2.3L V6 Automatic",
+          "engine": "3.0L",
+          "cylinders": "V4",
+          "transmission": "Automatic",
           "description": "Impalas are fast",
           "drivetrain":"2WD",
           "warranty":"none"

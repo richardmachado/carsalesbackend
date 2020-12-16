@@ -16,7 +16,9 @@ exports.up = function (knex) {
         table.string("color_interior");
         table.string("color_exterior");
         table.string("fabric");
-        table.string("engine");
+        table.string("engine_size");
+        table.string("cylinders");
+        table.string("transmission");
         table.string("drivetrain");
         table.string("warranty");
         table.string("description");
